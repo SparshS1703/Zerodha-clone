@@ -1,6 +1,18 @@
-import React from 'react';
-function Order() {
-    return ( <h1>Order</h1> );
-}
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default Order;
+const order = () => {
+  return (
+    <div className="orders">
+      <div className="no-orders">
+        <p>You haven't placed any orders today</p>
+
+        <Link to={"/"} className="btn">
+          Get started
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default order;
