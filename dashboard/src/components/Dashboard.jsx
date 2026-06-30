@@ -7,11 +7,14 @@ import Apps from './apps';
 import Summary from './Summary';
 import Funds from './funds';
 import {Routes, Route} from 'react-router-dom';
+import {GeneralContextProvider} from './GeneralContext';
 
 function Dashboard() {
     return ( 
         <div className='dashboard-container'>
+            <GeneralContextProvider>
             <Watchlist />
+            </GeneralContextProvider>
             <div className='content'>
                 <Routes>
                     <Route exact path="/" element={<Summary />}></Route>
